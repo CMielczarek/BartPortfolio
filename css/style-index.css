@@ -1,0 +1,555 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.heading {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+}
+.heading--orange {
+  color: #efac00;
+}
+.heading--first {
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+}
+.heading--second {
+  font-size: 32px;
+}
+.heading--third, .heading--fourth {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.text {
+  font-family: "Inter", sans-serif;
+}
+.text--navpopup, .text--first, .text--third {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+}
+.text--first, .text--third {
+  font-size: 16px;
+}
+.text--second, .text--sixth {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.67em;
+  color: rgba(255, 255, 255, 0.8);
+}
+.text--third {
+  font-feature-settings: "salt" on;
+  font-weight: 400;
+  font-size: 14px;
+}
+.text--third--small {
+  font-size: 11px;
+}
+.text--fourth {
+  font-size: 22px;
+}
+.text--fifth {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #828391;
+}
+.text--sixth {
+  font-size: 16px;
+}
+.text--bold {
+  font-weight: 700;
+}
+
+@media (min-width: 576px) {
+  .heading--first {
+    font-size: 96px;
+  }
+  .heading--second {
+    font-size: 40px;
+    letter-spacing: -0.03em;
+  }
+  .heading--third {
+    font-size: 32px;
+    font-weight: 800;
+  }
+  .text--third {
+    font-size: 16px;
+  }
+  .text--third--small {
+    font-size: 16px;
+  }
+}
+.container {
+  width: min(100% - 40px, 1240px);
+  margin-inline: auto;
+}
+
+.btn-index {
+  padding: 1em 2em;
+  border: 2px solid #1f1f3b;
+  border-radius: 0.75em;
+  background-color: #1f1f3b;
+  transition: background-color 0.3s;
+}
+.btn-index--block {
+  display: block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.btn-index:hover {
+  background-color: transparent;
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: min(100% - 80px, 1240px);
+  }
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding: 15em;
+  background-color: #060624;
+}
+
+.body {
+  position: relative;
+  font-size: 1rem;
+  background-color: #060624;
+}
+.body--stuck {
+  overflow: hidden;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.nav__container {
+  position: relative;
+  padding: 2.2em 2em;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.nav__logo {
+  max-width: 35px;
+  display: flex;
+  align-items: center;
+}
+.nav__hamburger {
+  padding-block: 0.75em;
+  border: none;
+  background-color: transparent;
+}
+.nav__links {
+  display: none;
+}
+.nav__link {
+  padding: 0.8em;
+}
+.nav__link--btn {
+  margin-top: 1em;
+}
+.nav__popup {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  width: 100vw;
+  height: 100vh;
+  background-color: #060624;
+  transition: translate 0.5s;
+}
+.nav__popup--hidden {
+  translate: 100%;
+}
+
+.header {
+  margin-top: 79px;
+  padding: 2.4em 0 8em;
+  overflow: hidden;
+}
+.header__title, .header__text, .header__btn {
+  position: relative;
+  margin-inline: auto;
+}
+.header__title, .header__text {
+  max-width: 335px;
+  text-align: center;
+}
+.header__arrow, .header__circle {
+  display: none;
+}
+.header__text {
+  padding: 1.34em 0 2.67em;
+}
+.header__btn {
+  display: flex;
+  align-items: center;
+  gap: 0.625em;
+}
+
+.slider {
+  margin-bottom: 8em;
+  padding: 32px 0;
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  height: 260px;
+  overflow-x: scroll;
+  background-color: #1f1f3b;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+.slider__element {
+  height: 100%;
+  border-radius: 6px;
+}
+
+.case-studies {
+  padding-bottom: 8.8em;
+}
+.case-studies__header {
+  padding-bottom: 4.8em;
+}
+.case-studies__cards {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  row-gap: 4.8em;
+}
+.case-studies__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding: 1.6em 1.6em 1.8em;
+  border-radius: 8px;
+  max-width: 588px;
+  aspect-ratio: 1/1.2;
+  background-size: cover;
+  overflow: hidden;
+}
+.case-studies__card--background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: initial;
+  height: 100%;
+  max-width: none;
+  translate: -50% -50%;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.8;
+}
+.case-studies__card--background:hover {
+  transform: scale(1.2);
+  transform-origin: 50% 50%;
+  opacity: 1;
+}
+.case-studies__card--tag {
+  display: inline-block;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.8em 1.6em;
+  border-radius: 2em;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(5, 6, 35, 0.1);
+}
+.case-studies__card--tag:last-child {
+  margin-right: 0;
+}
+.case-studies__card--description {
+  padding: 2.4em;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  background-color: rgba(5, 6, 35, 0.15);
+}
+.case-studies__card--title {
+  margin-bottom: 0.25em;
+}
+
+.know-me-better {
+  padding-bottom: 8.8em;
+}
+.know-me-better__container {
+  display: grid;
+  gap: 4em;
+}
+.know-me-better__description {
+  padding-block: 0.9em 0.25em;
+}
+.know-me-better__workplaces {
+  padding-top: 4em;
+  display: flex;
+  gap: 1.6em;
+}
+.know-me-better__img {
+  position: relative;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
+  max-width: 570px;
+}
+.know-me-better__img--bart {
+  position: relative;
+  width: 100%;
+}
+.know-me-better__img--ux, .know-me-better__img--ui {
+  box-sizing: content-box;
+  position: absolute;
+  width: 22%;
+  padding: 3%;
+  border-radius: 12px;
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.05);
+  z-index: 100;
+}
+.know-me-better__img--ux {
+  top: 15%;
+  right: 5%;
+}
+.know-me-better__img--ui {
+  left: 8%;
+  bottom: 15%;
+}
+
+.contact-me__cards {
+  position: relative;
+  padding-top: 4em;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.5em;
+  z-index: 1;
+}
+.contact-me__card {
+  position: relative;
+  display: block;
+  padding: 50px 0;
+  border-radius: 16px;
+  background-image: #1f1f3b;
+  transition: transform 0.3s;
+}
+.contact-me__card:hover {
+  transform: scale(0.9);
+}
+.contact-me__card-content {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  right: 1px;
+  border-radius: 16px;
+  background-color: #12132e;
+}
+.contact-me__card-textbox {
+  position: absolute;
+  top: 50%;
+  left: 88px;
+  transform: translateY(-50%);
+}
+.contact-me__card-title {
+  position: relative;
+  font-weight: 600;
+}
+.contact-me__card-icon {
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  transform: translate(-100%, -50%);
+}
+.contact-me__card--orange {
+  background-image: linear-gradient(95.93deg, rgba(239, 172, 0, 0.8) -1.83%, rgba(229, 175, 74, 0) 122.44%);
+}
+
+.footer {
+  padding: 14.6em 0 6.4em;
+}
+.footer__content {
+  text-align: center;
+}
+.footer__text {
+  padding-bottom: 0.35em;
+}
+
+@media (min-width: 576px) {
+  .body--stuck {
+    overflow: visible;
+  }
+  .nav__hamburger {
+    display: none;
+  }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+  }
+  .nav__link--btn {
+    margin-top: 0;
+    margin-left: 0.8em;
+  }
+  .nav__popup {
+    display: none;
+  }
+  .header {
+    margin-top: 104px;
+    padding: 7.2em 0 13.5em;
+  }
+  .header__title {
+    max-width: 961px;
+  }
+  .header__text {
+    max-width: 471px;
+  }
+  .slider {
+    margin-bottom: 13.5em;
+  }
+  .case-studies {
+    padding-bottom: 12em;
+  }
+  .case-studies__card {
+    border-radius: 16px;
+  }
+  .know-me-better {
+    padding-bottom: 16.2em;
+  }
+}
+@media (min-width: 768px) {
+  .case-studies__cards {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    -moz-column-gap: 3.2em;
+         column-gap: 3.2em;
+    row-gap: 4.4em;
+  }
+}
+@media (min-width: 992px) {
+  .header__arrow {
+    display: block;
+    position: absolute;
+    top: -25px;
+    right: -150px;
+  }
+  .know-me-better__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .know-me-better__text {
+    align-self: center;
+  }
+  .know-me-better__img {
+    justify-self: flex-end;
+  }
+  .footer {
+    padding: 16em 0 6.4em;
+  }
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__text {
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .header__circle {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    transition: scale 0.5s, opacity 0.5s;
+    opacity: 0.8;
+  }
+  .header__circle--big {
+    left: 0;
+    width: 144px;
+    height: 144px;
+    background-image: url("../img/index/healthcare.png");
+  }
+  .header__circle--big:hover {
+    scale: 2.125;
+  }
+  .header__circle--small {
+    top: 50%;
+    right: -100px;
+    width: 122px;
+    height: 122px;
+    background-image: url("../img/index/underground.png");
+  }
+  .header__circle--small:hover {
+    scale: 2.5;
+  }
+  .header__circle:hover {
+    opacity: 1;
+  }
+  .case-studies__header {
+    padding-bottom: 4.8em;
+  }
+  .case-studies__cards {
+    grid-template-columns: repeat(2, 588px);
+    justify-content: space-between;
+    row-gap: 8.8em;
+  }
+  .case-studies__card {
+    margin-inline: 0;
+    padding: 2.4em;
+  }
+  .contact-me__cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}/*# sourceMappingURL=style-index.css.map */

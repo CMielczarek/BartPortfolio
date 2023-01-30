@@ -1,0 +1,98 @@
+@use './colors' as *;
+.heading {
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 800;
+	color: $text;
+	&-first {
+		font-weight: 900;
+		font-size: 48px;
+		line-height: 58px;
+	}
+	&-second {
+		font-size: 24px;
+		line-height: 29px;
+	}
+	&-third {
+		font-size: 32px;
+		line-height: 39px;
+	}
+}
+
+.text {
+	font-family: 'Inter', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: $text;
+	&-first {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 28px;
+	}
+	&-second,
+	&-third {
+		font-size: 18px;
+		line-height: 22px;
+	}
+	&-third,
+	&-fifth {
+		font-weight: 700;
+	}
+	&-fourth {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	&-sixth {
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 44px;
+	}
+	&-seventh {
+		font-size: 18px;
+		line-height: 30px;
+		color: $text-body;
+		&-white{
+			color: $text;
+		}
+	}
+	&-eighth{
+		font-size: 12px;
+		line-height: 20px;
+		color: #cecece;
+	}
+	&-nineth {
+		font-weight: 600;
+		font-size: 12px;
+		line-height: 150%;
+		color: $text-muted;
+	}
+	&-navitem {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 150%;
+		&-slide {
+			font-size: 24px;
+		}
+	}
+	&-700{
+		font-weight: 700;
+	}
+	&-grey{
+		color: $text-body;
+	}
+	&-muted{
+		color: $text-muted;
+	}
+	&-underline{
+		text-decoration: underline;
+	}
+}
+
+@media (min-width: 576px) {
+	.heading {
+		&-second {
+			font-size: 40px;
+			line-height: 48px;
+		}
+	}
+}
