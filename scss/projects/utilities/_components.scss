@@ -1,10 +1,8 @@
 @use './colors' as *;
 
 .container {
-	margin: 0 auto;
-	padding: 0 24px;
-	width: 100%;
-	max-width: 1300px;
+	width: min(calc(100% - 40px), 1240px);
+	margin-inline: auto;
 }
 
 .btn {
@@ -19,6 +17,21 @@
 	&:hover {
 		background-color: $btn-hover;
 		color: $btn-text-hover;
+	}
+}
+
+.btn-index {
+	padding: 1em 2em;
+	border: 2px solid $btn-index;
+	border-radius: 0.75em;
+	background-color: $btn-index;
+	transition: background-color 0.3s;
+	&--block {
+		display: block;
+		width: max-content;
+	}
+	&:hover {
+		background-color: transparent;
 	}
 }
 
@@ -39,9 +52,9 @@
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
 	.container {
-		padding: 0 80px;
+		width: min(calc(100% - 80px), 1240px);
 	}
 }
 

@@ -57,6 +57,9 @@ button {
   font-size: 22px;
   font-weight: 700;
 }
+.heading--third {
+  font-size: 24px;
+}
 
 .text {
   font-family: "Inter", sans-serif;
@@ -78,10 +81,10 @@ button {
 .text--third {
   font-feature-settings: "salt" on;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
 }
 .text--third--small {
-  font-size: 11px;
+  font-size: 14px;
 }
 .text--fourth {
   font-size: 22px;
@@ -110,9 +113,6 @@ button {
   .heading--third {
     font-size: 32px;
     font-weight: 800;
-  }
-  .text--third {
-    font-size: 16px;
   }
   .text--third--small {
     font-size: 16px;
@@ -430,21 +430,6 @@ html {
   .body--stuck {
     overflow: visible;
   }
-  .nav__hamburger {
-    display: none;
-  }
-  .nav__links {
-    display: flex;
-    align-items: center;
-    gap: 4em;
-  }
-  .nav__link--btn {
-    margin-top: 0;
-    margin-left: 0.8em;
-  }
-  .nav__popup {
-    display: none;
-  }
   .header {
     margin-top: 104px;
     padding: 7.2em 0 13.5em;
@@ -475,6 +460,23 @@ html {
     -moz-column-gap: 3.2em;
          column-gap: 3.2em;
     row-gap: 4.4em;
+  }
+}
+@media (min-width: 676px) {
+  .nav__hamburger {
+    display: none;
+  }
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 4em;
+  }
+  .nav__link--btn {
+    margin-top: 0;
+    margin-left: 0.8em;
+  }
+  .nav__popup {
+    display: none;
   }
 }
 @media (min-width: 992px) {
@@ -535,6 +537,9 @@ html {
   }
   .header__circle:hover {
     opacity: 1;
+  }
+  .case-studies {
+    overflow: hidden;
   }
   .case-studies__header {
     padding-bottom: 4.8em;

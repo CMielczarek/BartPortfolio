@@ -290,25 +290,6 @@ html {
 			overflow: visible;
 		}
 	}
-	.nav {
-		&__hamburger {
-			display: none;
-		}
-		&__links {
-			display: flex;
-			align-items: center;
-			gap: 4em;
-		}
-		&__link {
-			&--btn {
-				margin-top: 0;
-				margin-left: 0.8em;
-			}
-		}
-		&__popup {
-			display: none;
-		}
-	}
 	.header {
 		margin-top: 104px;
 		padding: 7.2em 0 13.5em;
@@ -342,7 +323,27 @@ html {
 		}
 	}
 }
-
+@media (min-width: 676px) {
+	.nav {
+		&__hamburger {
+			display: none;
+		}
+		&__links {
+			display: flex;
+			align-items: center;
+			gap: 4em;
+		}
+		&__link {
+			&--btn {
+				margin-top: 0;
+				margin-left: 0.8em;
+			}
+		}
+		&__popup {
+			display: none;
+		}
+	}
+}
 @media (min-width: 992px) {
 	.header {
 		&__arrow {
@@ -410,6 +411,7 @@ html {
 		}
 	}
 	.case-studies {
+		overflow: hidden;
 		&__header {
 			padding-bottom: 4.8em;
 		}

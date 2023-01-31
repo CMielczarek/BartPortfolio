@@ -21,6 +21,9 @@
 		font-size: 22px;
 		font-weight: 700;
 	}
+	&--third {
+		font-size: 24px;
+	}
 }
 
 .text {
@@ -47,9 +50,9 @@
 	&--third {
 		font-feature-settings: 'salt' on;
 		font-weight: 400;
-		font-size: 14px;
+		font-size: 16px;
 		&--small {
-			font-size: 11px;
+			font-size: 14px;
 		}
 	}
 	&--fourth {
@@ -85,7 +88,6 @@
 	}
 	.text {
 		&--third {
-			font-size: 16px;
 			&--small {
 				font-size: 16px;
 			}

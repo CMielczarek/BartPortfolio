@@ -4,10 +4,13 @@ $main: #175cd3;
 	scroll-behavior: smooth;
 	background-color: $background;
 }
-body {
+.body {
 	position: relative;
 	font-size: 1.6rem;
 	background-color: $background;
+	&--stuck {
+		overflow: hidden;
+	}
 }
 
 .section {
@@ -30,52 +33,55 @@ body {
 }
 
 .nav {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: $background;
-	.container {
+	z-index: 1000;
+	&__container {
 		position: relative;
-	}
-	&__scroll {
-		display: none;
-	}
-	&__box {
-		display: grid;
-		grid-template-columns: repeat(2, max-content);
-		align-items: center;
+		padding: 22px 20px;
+		display: flex;
 		justify-content: space-between;
-		padding: 1.5em 0;
+		align-items: center;
+		z-index: 1000;
 	}
-	&__sections {
-		display: none;
+	&__logo {
+		display: flex;
+		max-width: 35px;
 	}
 	&__hamburger {
-		position: relative;
-		z-index: 4;
+		padding-block: 0.75em;
+		border: none;
+		background-color: transparent;
 	}
-	&__slide-out {
+	&__links {
+		display: none;
+	}
+	&__link {
+		padding: 0.8em;
+		&--btn {
+			margin-top: 1em;
+		}
+	}
+	&__popup {
 		position: fixed;
+		top: 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		align-items: center;
-		gap: 3em;
-		top: 0;
-		left: 0;
+		justify-content: center;
+		gap: 40px;
 		width: 100vw;
 		height: 100vh;
 		background-color: $background;
-		z-index: 3;
-		opacity: 0;
-		transform: translateX(105%);
-		transition: transform 1s, opacity 1s;
-		&-btn {
-			margin-top: 0.5em;
+		transition: translate 0.5s;
+		&--hidden {
+			translate: 100%;
 		}
 	}
 }
+
 .slide {
 	transform: translateX(0);
 	opacity: 1;
@@ -85,7 +91,6 @@ body {
 }
 
 .hero {
-	padding-top: 104px;
 	&__img {
 		width: 100%;
 	}
@@ -184,7 +189,7 @@ body {
 		flex-direction: column;
 		gap: 40px;
 	}
-	&__list{
+	&__list {
 		padding-left: 16px;
 	}
 	&__img {
@@ -418,42 +423,12 @@ body {
 	align-items: flex-start;
 }
 @media (min-width: 576px) {
-	body {
-		overflow: visible !important;
-	}
-	.nav {
-		&__scroll {
-			display: block;
-			position: fixed;
-			right: 2.5%;
-			bottom: 5%;
-			z-index: 1000;
-		}
-		&__hamburger,
-		&__slide-out {
-			display: none;
-		}
-		&__sections {
-			display: grid;
-			grid-template-columns: repeat(3, max-content);
-			align-items: center;
-			gap: 8px;
-			.btn {
-				margin-left: 1.5em;
-			}
-			a:not(.btn) {
-				padding: 1em;
-			}
-		}
-	}
-	.hero {
-		padding-top: 104px;
-	}
 	.competetive-analysis {
 		&__box {
 			gap: 80px;
 		}
 	}
+
 	.personas {
 		padding-bottom: 104px;
 		&__text {
@@ -503,7 +478,27 @@ body {
 		}
 	}
 }
-
+@media (min-width: 676px) {
+	.nav {
+		&__hamburger {
+			display: none;
+		}
+		&__links {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+		}
+		&__link {
+			&--btn {
+				margin-top: 0;
+				margin-left: 0.8em;
+			}
+		}
+		&__popup {
+			display: none;
+		}
+	}
+}
 @media (min-width: 992px) {
 	.iplus-app {
 		padding-top: 2em;
