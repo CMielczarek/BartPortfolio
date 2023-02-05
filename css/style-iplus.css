@@ -111,7 +111,7 @@ table {
   line-height: 58px;
 }
 .heading-second {
-  font-size: 24px;
+  font-size: 32px;
   line-height: 29px;
 }
 .heading-third {
@@ -271,6 +271,12 @@ table {
 .nav__popup--hidden {
   translate: 100%;
 }
+.nav__scroll {
+  position: fixed;
+  bottom: 5%;
+  right: 2.5%;
+  z-index: 10;
+}
 
 .slide {
   transform: translateX(0);
@@ -295,7 +301,7 @@ table {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   color: #050623;
-  background-color: #01eb64;
+  background-color: #00EB65;
 }
 .iplus-app__items {
   display: flex;
@@ -532,7 +538,6 @@ table {
   padding-top: 50px;
   padding-bottom: 60px;
   margin-top: 100px;
-  margin-bottom: 50px;
 }
 .user-survey::before {
   content: "";
@@ -561,13 +566,17 @@ table {
 .personas__content-first-img {
   display: none;
 }
+.personas__content-first-text {
+  padding-block: 88px;
+}
 .personas__content-second__imgbox {
+  display: grid;
   padding-top: 40px;
+  gap: 16px;
 }
 .personas__content-second img {
-  position: relative;
-  right: 2.5%;
-  width: 105.5%;
+  width: 100%;
+  border-radius: 6px;
 }
 
 .flow-diagram {
@@ -654,7 +663,8 @@ table {
   padding: 48px 0;
 }
 .uidesign__typeface--img {
-  max-width: 60px;
+  width: 100%;
+  max-width: 180px;
 }
 .uidesign__text2 {
   padding: 88px 0;
@@ -857,9 +867,6 @@ table {
   .uidesign__typeface--abc {
     padding-bottom: 72px;
   }
-  .uidesign__typeface--img {
-    max-width: none;
-  }
   .uidesign__img {
     padding-top: 64px;
     padding-bottom: 16px;
@@ -971,6 +978,10 @@ table {
   }
   .personas__content-second__imgbox {
     padding-top: 64px;
+    gap: 64px;
+  }
+  .personas__content-second img {
+    border-radius: 20px;
   }
   .footer {
     padding-top: 104px;

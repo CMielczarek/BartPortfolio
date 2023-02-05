@@ -79,6 +79,12 @@ html {
 			translate: 100%;
 		}
 	}
+	&__scroll{
+		position: fixed;
+		bottom: 5%;
+		right: 2.5%;
+		z-index: 10;
+	}
 }
 
 .hero {

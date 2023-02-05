@@ -4,6 +4,7 @@ $main: #175cd3;
 	scroll-behavior: smooth;
 	background-color: $background;
 }
+
 .body {
 	position: relative;
 	font-size: 1.6rem;
@@ -14,9 +15,6 @@ $main: #175cd3;
 }
 
 .section {
-	overflow: hidden;
-}
-.hidden {
 	overflow: hidden;
 }
 .img {
@@ -79,6 +77,12 @@ $main: #175cd3;
 		&--hidden {
 			translate: 100%;
 		}
+	}
+	&__scroll {
+		position: fixed;
+		bottom: 5%;
+		right: 2.5%;
+		z-index: 10;
 	}
 }
 
@@ -306,6 +310,7 @@ $main: #175cd3;
 	margin: 80px 0;
 	&--two {
 		padding-top: 0;
+		overflow: hidden;
 	}
 	&__title {
 		padding-bottom: 8px;
@@ -317,7 +322,8 @@ $main: #175cd3;
 			border-radius: 20px;
 		}
 		&--two {
-			width: 107%;
+			position: relative;
+			width: 107.5%;
 		}
 	}
 }
@@ -410,6 +416,7 @@ $main: #175cd3;
 }
 .summary {
 	padding-top: 120px;
+	padding-bottom: 80px;
 	&__content {
 		img {
 			display: none;
@@ -453,9 +460,9 @@ $main: #175cd3;
 		}
 	}
 	.high-fidelity {
-		padding-bottom: 106px;
+		padding-bottom: 104px;
 		&__imgbox {
-			gap: 106px;
+			gap: 104px;
 			padding-top: 64px;
 		}
 	}
