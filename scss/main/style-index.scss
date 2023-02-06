@@ -102,22 +102,44 @@ html {
 }
 
 .slider {
-	margin-bottom: 8em;
-	padding: 32px 0;
-	display: flex;
+	display: grid;
+	grid-auto-columns: 262px;
+	grid-auto-flow: column;
 	gap: 16px;
+	margin-bottom: 8em;
+	padding: 32px 16px;
 	width: 100%;
 	height: 260px;
-	overflow-x: scroll;
 	background-color: $btn-index;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
-	&::-webkit-scrollbar {
-		display: none;
-	}
+	overflow: hidden;
 	&__element {
-		height: 100%;
+		$delay: 30s;
+		$n: -8;
+		grid-area: 1/1;
+		height: 196px;
 		border-radius: 6px;
+		animation: slider $delay infinite linear;
+		&:nth-child(2) {
+			animation-delay: calc($delay/$n);
+		}
+		&:nth-child(3) {
+			animation-delay: calc(2*$delay/$n);
+		}
+		&:nth-child(4) {
+			animation-delay: calc(3*$delay/$n);
+		}
+		&:nth-child(5) {
+			animation-delay: calc(4*$delay/$n);
+		}
+		&:nth-child(6) {
+			animation-delay: calc(5*$delay/$n);
+		}
+		&:nth-child(7) {
+			animation-delay: calc(6*$delay/$n);
+		}
+		&:nth-child(8) {
+			animation-delay: calc(7*$delay/$n);
+		}
 	}
 }
 
@@ -436,5 +458,14 @@ html {
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: 1fr;
 		}
+	}
+}
+
+@keyframes slider {
+	from {
+		translate: -100vh;
+	}
+	to {
+		translate: 200vh;
 	}
 }

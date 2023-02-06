@@ -243,23 +243,51 @@ html {
 }
 
 .slider {
-  margin-bottom: 8em;
-  padding: 32px 0;
-  display: flex;
+  display: grid;
+  grid-auto-columns: 262px;
+  grid-auto-flow: column;
   gap: 16px;
+  margin-bottom: 8em;
+  padding: 32px 16px;
   width: 100%;
   height: 260px;
-  overflow-x: scroll;
   background-color: #1f1f3b;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-.slider::-webkit-scrollbar {
-  display: none;
+  overflow: hidden;
 }
 .slider__element {
-  height: 100%;
+  grid-area: 1/1;
+  height: 196px;
   border-radius: 6px;
+  -webkit-animation: slider 30s infinite linear;
+          animation: slider 30s infinite linear;
+}
+.slider__element:nth-child(2) {
+  -webkit-animation-delay: -3.75s;
+          animation-delay: -3.75s;
+}
+.slider__element:nth-child(3) {
+  -webkit-animation-delay: -7.5s;
+          animation-delay: -7.5s;
+}
+.slider__element:nth-child(4) {
+  -webkit-animation-delay: -11.25s;
+          animation-delay: -11.25s;
+}
+.slider__element:nth-child(5) {
+  -webkit-animation-delay: -15s;
+          animation-delay: -15s;
+}
+.slider__element:nth-child(6) {
+  -webkit-animation-delay: -18.75s;
+          animation-delay: -18.75s;
+}
+.slider__element:nth-child(7) {
+  -webkit-animation-delay: -22.5s;
+          animation-delay: -22.5s;
+}
+.slider__element:nth-child(8) {
+  -webkit-animation-delay: -26.25s;
+          animation-delay: -26.25s;
 }
 
 .case-studies {
@@ -562,5 +590,21 @@ html {
   .contact-me__cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+  }
+}
+@-webkit-keyframes slider {
+  from {
+    translate: -100vh;
+  }
+  to {
+    translate: 200vh;
+  }
+}
+@keyframes slider {
+  from {
+    translate: -100vh;
+  }
+  to {
+    translate: 200vh;
   }
 }/*# sourceMappingURL=style-index.css.map */
