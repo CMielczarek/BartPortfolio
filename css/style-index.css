@@ -260,6 +260,7 @@ html {
   border-radius: 6px;
   -webkit-animation: slider 30s infinite linear;
           animation: slider 30s infinite linear;
+  overflow: hidden;
 }
 .slider__element:nth-child(2) {
   -webkit-animation-delay: -4.2857142857s;
