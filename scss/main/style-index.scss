@@ -16,6 +16,10 @@ html {
 	}
 }
 
+main{
+	overflow: hidden;
+}
+
 .nav {
 	position: fixed;
 	top: 0;
@@ -108,13 +112,13 @@ html {
 	gap: 16px;
 	margin-bottom: 8em;
 	padding: 32px 16px;
-	width: 100%;
+	width: 3000px;
 	height: 260px;
 	background-color: $btn-index;
 	overflow: hidden;
 	&__element {
-		$delay: 30s;
-		$n: -7;
+		$delay: 60s;
+		$n: -13;
 		grid-area: 1/1;
 		height: 196px;
 		border-radius: 6px;
@@ -152,6 +156,9 @@ html {
 		}
 		&:nth-child(12) {
 			animation-delay: calc(11 * $delay/$n);
+		}
+		&:nth-child(13) {
+			animation-delay: calc(12 * $delay/$n);
 		}
 	}
 }
@@ -384,49 +391,6 @@ html {
 			display: none;
 		}
 	}
-	.slider {
-		&__element {
-			$delay: 30s;
-			$n: -7;
-			grid-area: 1/1;
-			height: 196px;
-			border-radius: 6px;
-			animation: slider $delay infinite linear;
-			&:nth-child(2) {
-				animation-delay: calc(1 * $delay/$n);
-			}
-			&:nth-child(3) {
-				animation-delay: calc(2 * $delay/$n);
-			}
-			&:nth-child(4) {
-				animation-delay: calc(3 * $delay/$n);
-			}
-			&:nth-child(5) {
-				animation-delay: calc(4 * $delay/$n);
-			}
-			&:nth-child(6) {
-				animation-delay: calc(5 * $delay/$n);
-			}
-			&:nth-child(7) {
-				animation-delay: calc(6 * $delay/$n);
-			}
-			&:nth-child(8) {
-				animation-delay: calc(7 * $delay/$n);
-			}
-			&:nth-child(9) {
-				animation-delay: calc(8 * $delay/$n);
-			}
-			&:nth-child(10) {
-				animation-delay: calc(9 * $delay/$n);
-			}
-			&:nth-child(11) {
-				animation-delay: calc(10 * $delay/$n);
-			}
-			&:nth-child(12) {
-				animation-delay: calc(11 * $delay/$n);
-			}
-		}
-	}
 }
 @media (min-width: 992px) {
 	.header {
@@ -494,49 +458,6 @@ html {
 			}
 		}
 	}
-	.slider {
-		&__element {
-			$delay: 30s;
-			$n: -8;
-			grid-area: 1/1;
-			height: 196px;
-			border-radius: 6px;
-			animation: slider $delay infinite linear;
-			&:nth-child(2) {
-				animation-delay: calc(1 * $delay/$n);
-			}
-			&:nth-child(3) {
-				animation-delay: calc(2 * $delay/$n);
-			}
-			&:nth-child(4) {
-				animation-delay: calc(3 * $delay/$n);
-			}
-			&:nth-child(5) {
-				animation-delay: calc(4 * $delay/$n);
-			}
-			&:nth-child(6) {
-				animation-delay: calc(5 * $delay/$n);
-			}
-			&:nth-child(7) {
-				animation-delay: calc(6 * $delay/$n);
-			}
-			&:nth-child(8) {
-				animation-delay: calc(7 * $delay/$n);
-			}
-			&:nth-child(9) {
-				animation-delay: calc(8 * $delay/$n);
-			}
-			&:nth-child(10) {
-				animation-delay: calc(9 * $delay/$n);
-			}
-			&:nth-child(11) {
-				animation-delay: calc(10 * $delay/$n);
-			}
-			&:nth-child(12) {
-				animation-delay: calc(11 * $delay/$n);
-			}
-		}
-	}
 	.case-studies {
 		overflow: hidden;
 		&__header {
@@ -562,9 +483,9 @@ html {
 
 @keyframes slider {
 	from {
-		translate: -100vh;
+		translate: -600px;
 	}
 	to {
-		translate: 200vh;
+		translate: 3000px;
 	}
 }

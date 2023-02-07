@@ -161,6 +161,10 @@ html {
   overflow: hidden;
 }
 
+main {
+  overflow: hidden;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -249,7 +253,7 @@ html {
   gap: 16px;
   margin-bottom: 8em;
   padding: 32px 16px;
-  width: 100%;
+  width: 3000px;
   height: 260px;
   background-color: #1f1f3b;
   overflow: hidden;
@@ -258,53 +262,57 @@ html {
   grid-area: 1/1;
   height: 196px;
   border-radius: 6px;
-  -webkit-animation: slider 30s infinite linear;
-          animation: slider 30s infinite linear;
+  -webkit-animation: slider 60s infinite linear;
+          animation: slider 60s infinite linear;
   overflow: hidden;
 }
 .slider__element:nth-child(2) {
-  -webkit-animation-delay: -4.2857142857s;
-          animation-delay: -4.2857142857s;
+  -webkit-animation-delay: -4.6153846154s;
+          animation-delay: -4.6153846154s;
 }
 .slider__element:nth-child(3) {
-  -webkit-animation-delay: -8.5714285714s;
-          animation-delay: -8.5714285714s;
+  -webkit-animation-delay: -9.2307692308s;
+          animation-delay: -9.2307692308s;
 }
 .slider__element:nth-child(4) {
-  -webkit-animation-delay: -12.8571428571s;
-          animation-delay: -12.8571428571s;
+  -webkit-animation-delay: -13.8461538462s;
+          animation-delay: -13.8461538462s;
 }
 .slider__element:nth-child(5) {
-  -webkit-animation-delay: -17.1428571429s;
-          animation-delay: -17.1428571429s;
+  -webkit-animation-delay: -18.4615384615s;
+          animation-delay: -18.4615384615s;
 }
 .slider__element:nth-child(6) {
-  -webkit-animation-delay: -21.4285714286s;
-          animation-delay: -21.4285714286s;
+  -webkit-animation-delay: -23.0769230769s;
+          animation-delay: -23.0769230769s;
 }
 .slider__element:nth-child(7) {
-  -webkit-animation-delay: -25.7142857143s;
-          animation-delay: -25.7142857143s;
+  -webkit-animation-delay: -27.6923076923s;
+          animation-delay: -27.6923076923s;
 }
 .slider__element:nth-child(8) {
-  -webkit-animation-delay: -30s;
-          animation-delay: -30s;
+  -webkit-animation-delay: -32.3076923077s;
+          animation-delay: -32.3076923077s;
 }
 .slider__element:nth-child(9) {
-  -webkit-animation-delay: -34.2857142857s;
-          animation-delay: -34.2857142857s;
+  -webkit-animation-delay: -36.9230769231s;
+          animation-delay: -36.9230769231s;
 }
 .slider__element:nth-child(10) {
-  -webkit-animation-delay: -38.5714285714s;
-          animation-delay: -38.5714285714s;
+  -webkit-animation-delay: -41.5384615385s;
+          animation-delay: -41.5384615385s;
 }
 .slider__element:nth-child(11) {
-  -webkit-animation-delay: -42.8571428571s;
-          animation-delay: -42.8571428571s;
+  -webkit-animation-delay: -46.1538461538s;
+          animation-delay: -46.1538461538s;
 }
 .slider__element:nth-child(12) {
-  -webkit-animation-delay: -47.1428571429s;
-          animation-delay: -47.1428571429s;
+  -webkit-animation-delay: -50.7692307692s;
+          animation-delay: -50.7692307692s;
+}
+.slider__element:nth-child(13) {
+  -webkit-animation-delay: -55.3846153846s;
+          animation-delay: -55.3846153846s;
 }
 
 .case-studies {
@@ -529,57 +537,6 @@ html {
   .nav__popup {
     display: none;
   }
-  .slider__element {
-    grid-area: 1/1;
-    height: 196px;
-    border-radius: 6px;
-    -webkit-animation: slider 30s infinite linear;
-            animation: slider 30s infinite linear;
-  }
-  .slider__element:nth-child(2) {
-    -webkit-animation-delay: -4.2857142857s;
-            animation-delay: -4.2857142857s;
-  }
-  .slider__element:nth-child(3) {
-    -webkit-animation-delay: -8.5714285714s;
-            animation-delay: -8.5714285714s;
-  }
-  .slider__element:nth-child(4) {
-    -webkit-animation-delay: -12.8571428571s;
-            animation-delay: -12.8571428571s;
-  }
-  .slider__element:nth-child(5) {
-    -webkit-animation-delay: -17.1428571429s;
-            animation-delay: -17.1428571429s;
-  }
-  .slider__element:nth-child(6) {
-    -webkit-animation-delay: -21.4285714286s;
-            animation-delay: -21.4285714286s;
-  }
-  .slider__element:nth-child(7) {
-    -webkit-animation-delay: -25.7142857143s;
-            animation-delay: -25.7142857143s;
-  }
-  .slider__element:nth-child(8) {
-    -webkit-animation-delay: -30s;
-            animation-delay: -30s;
-  }
-  .slider__element:nth-child(9) {
-    -webkit-animation-delay: -34.2857142857s;
-            animation-delay: -34.2857142857s;
-  }
-  .slider__element:nth-child(10) {
-    -webkit-animation-delay: -38.5714285714s;
-            animation-delay: -38.5714285714s;
-  }
-  .slider__element:nth-child(11) {
-    -webkit-animation-delay: -42.8571428571s;
-            animation-delay: -42.8571428571s;
-  }
-  .slider__element:nth-child(12) {
-    -webkit-animation-delay: -47.1428571429s;
-            animation-delay: -47.1428571429s;
-  }
 }
 @media (min-width: 992px) {
   .header__arrow {
@@ -640,57 +597,6 @@ html {
   .header__circle:hover {
     opacity: 1;
   }
-  .slider__element {
-    grid-area: 1/1;
-    height: 196px;
-    border-radius: 6px;
-    -webkit-animation: slider 30s infinite linear;
-            animation: slider 30s infinite linear;
-  }
-  .slider__element:nth-child(2) {
-    -webkit-animation-delay: -3.75s;
-            animation-delay: -3.75s;
-  }
-  .slider__element:nth-child(3) {
-    -webkit-animation-delay: -7.5s;
-            animation-delay: -7.5s;
-  }
-  .slider__element:nth-child(4) {
-    -webkit-animation-delay: -11.25s;
-            animation-delay: -11.25s;
-  }
-  .slider__element:nth-child(5) {
-    -webkit-animation-delay: -15s;
-            animation-delay: -15s;
-  }
-  .slider__element:nth-child(6) {
-    -webkit-animation-delay: -18.75s;
-            animation-delay: -18.75s;
-  }
-  .slider__element:nth-child(7) {
-    -webkit-animation-delay: -22.5s;
-            animation-delay: -22.5s;
-  }
-  .slider__element:nth-child(8) {
-    -webkit-animation-delay: -26.25s;
-            animation-delay: -26.25s;
-  }
-  .slider__element:nth-child(9) {
-    -webkit-animation-delay: -30s;
-            animation-delay: -30s;
-  }
-  .slider__element:nth-child(10) {
-    -webkit-animation-delay: -33.75s;
-            animation-delay: -33.75s;
-  }
-  .slider__element:nth-child(11) {
-    -webkit-animation-delay: -37.5s;
-            animation-delay: -37.5s;
-  }
-  .slider__element:nth-child(12) {
-    -webkit-animation-delay: -41.25s;
-            animation-delay: -41.25s;
-  }
   .case-studies {
     overflow: hidden;
   }
@@ -713,17 +619,17 @@ html {
 }
 @-webkit-keyframes slider {
   from {
-    translate: -100vh;
+    translate: -600px;
   }
   to {
-    translate: 200vh;
+    translate: 3000px;
   }
 }
 @keyframes slider {
   from {
-    translate: -100vh;
+    translate: -600px;
   }
   to {
-    translate: 200vh;
+    translate: 3000px;
   }
 }/*# sourceMappingURL=style-index.css.map */
